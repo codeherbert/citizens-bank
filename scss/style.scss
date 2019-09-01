@@ -1,0 +1,624 @@
+/*! HTML5 Boilerplate v6.1.0 | MIT License | https://html5boilerplate.com/ */
+
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+   html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Vendor-prefixed and regular ::selection selectors cannot be combined:
+ * https://stackoverflow.com/a/16982510/7133471
+ *
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+//Sass Variables
+
+$color-primary: #00945f; //Green
+$color-text-light: #ffffff; //White
+$color-text-secondary: #888888; //Gray
+
+
+//Global Styles
+
+body, html {
+    background-color: #ffffff;
+    color: $color-text-secondary;
+    font-family: Arial;
+    font-size: 16px; 
+}
+
+body main {
+    margin: 0 6.25%;
+}
+
+figure {
+    margin: 0;
+}
+
+img {
+    height: auto;
+    width: 100%;
+}
+
+//Sass Mixins
+
+@mixin section-heading {
+    color: $color-primary;
+    font-size: 1.7em;
+    margin: 45px 0 22.5px 0;
+    text-align: center;
+    p {
+        margin-bottom: 0;
+    }
+}  
+
+@mixin font-primary {
+    font-size: 0.97em;
+    line-height: 2rem;
+}
+
+/*========== Header Area ==========*/
+
+.header-logo {
+    margin: 25px auto;
+    width: 54.68%;
+}
+
+.header-logo-desktop-img {
+    display: none;
+}
+
+.hero-img {
+    margin: 0;
+}
+
+.image2 {
+    display: none;
+}
+
+/*========== Top Area ==========*/
+
+.top-heading {
+    @include section-heading;
+}    
+
+.line-break {
+    background-color: $color-primary;
+    height: 2.5px;
+    width: 23.43%;
+    margin: auto;
+}
+
+.top-info {
+    @include font-primary;
+    margin-bottom: 0;
+}
+
+.button-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    button {
+        background-color: #e97300;
+        border: none;
+        color: $color-text-light;
+        height: 40px;
+        margin: 50px auto;
+        width: 51.56%;
+    }
+}
+
+/*========== Citizens Advantage Area ==========*/
+
+.advantage-heading {
+    @include section-heading;
+    margin-top: 0;
+}
+
+.line-break {
+    height: 2px;
+}
+
+.advantage-topic {
+    color: $color-primary;
+    font-size: 1.3em;
+    font-weight: normal;
+    margin: 25px auto;
+}
+
+.advantage-item1, .advantage-item2, .advantage-item3 {
+    border-bottom: 1px solid $color-text-secondary;
+    p {
+        @include font-primary;
+    }
+}
+
+.advantage-item4 {
+    margin-bottom: 40px;
+    p {
+        @include font-primary;
+    }
+}
+
+.learn-more {
+    margin: 15px auto 25px auto;
+}
+
+.learn-more a {
+    color: #759b24;
+    margin: 15px auto 25px;
+    text-decoration: none;
+}
+
+/*========== Loans Area ==========*/
+
+.loans-box-header {
+    background-color: $color-primary;
+    color: $color-text-light;
+    font-size: 1.24em;
+    margin-bottom: 0;
+    padding: 22px 22px 18px;
+    text-align: center;
+}
+
+.loans-box-info {
+    background-color: #ebf7f5;
+    margin-top: 0;
+    margin-bottom: 30px;
+    padding: 10px;
+}
+
+.loans-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.loans-person {
+    width: 56.25%;
+    p {
+        margin-top: 0px;
+        text-align: center;
+    }
+}
+
+.loans-photo img {
+    margin-bottom: 15px;
+}
+
+.loans-quote {
+    font-style: italic;
+}
+
+.name-title {
+    color: #29ae8d;
+    font-size: 0.9em;
+    margin: 30px auto;
+}
+
+/*========== Footer Area ==========*/
+
+.footer-area {
+    border-top: 1px solid $color-primary;
+    margin-bottom: 35px;
+}
+
+.footer-icons, .footer-info, .privacy-statement {
+    margin: auto 6.25%;
+}
+
+.footer-icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 55%;
+    margin: 25px auto 25px 1.95%;
+}
+
+.footer-info {
+    color: #666666;
+    font-size: .69em;
+}
+
+.eeo-law a, .click-here a {
+    color: #666666;
+    // text-decoration: underline;   
+}
+
+.privacy-statement {
+    color: #000;
+    font-size: .66em;
+    margin-top: 25px;
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden {
+    display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ *
+ * 1. For long content, line feeds are not interpreted as spaces and small width
+ *    causes content to wrap 1 word per line:
+ *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    white-space: nowrap; /* 1 */
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+    white-space: inherit;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width:768px) {
+    // Tablet/Desktop Styles Here 
+
+    /*========== Global Styles ==========*/
+    body {
+        max-width: 1280px;
+        margin: auto;
+        main {
+            margin: 0 2.89%;
+        }    
+    }
+
+    /*========== Header Area ==========*/
+    .image1 {
+        display: none;   
+    }
+
+    .image2 {
+        display: block;
+    }
+
+    .header-logo-img {
+        display: none;
+    }
+
+    .header-logo-desktop-img {
+        display: block;
+    }
+
+    .header-logo {
+        margin: 65px 2.89% 53px;
+        width: 25%;
+    }
+
+    /*========== Top Area ==========*/
+
+    .top-heading {
+        font-size: 1.65em;
+    }
+
+    .top-info {
+        font-size: .98em;
+        margin-bottom: 0;
+    }  
+
+    .line-break {
+        width: 5.86%;
+    }
+
+    .button-wrapper button {
+        height: 40px;
+        margin: 50px auto 45px;
+        width: 12.89%;
+    }
+
+    /*========== Citizens Advantage Area ==========*/
+    
+    .advantage-heading {
+        font-size: 1.65em;
+        margin-top: 0;
+    }
+
+    .advantage-area {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .advantage-flex-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .advantage-item1, .advantage-item2, .advantage-item3 {
+        border-bottom: none;
+    }
+
+    .advantage-item1, .advantage-item3 {
+        p {
+            margin-right: 6em;
+        }
+    }
+
+    .advantage-item2 {
+        flex-basis: 88em;
+    }
+
+    .advantage-item4 {
+        flex-basis: 79em;
+    }
+
+    .advantage-flex-container p {
+        font-size: .93em;
+    }
+
+    /*========== Loans Area ==========*/
+
+    .loans-box-header {
+        margin-bottom: 0;
+    }
+
+    #loans-mark {
+        margin-left:-90px;
+        text-align: center;
+        width: 230%;
+    }
+
+    .loans-person {
+        margin: 60px 0 138px;
+        width: 14.06%;
+    }
+
+    .loans-area {
+        align-items: flex-start;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .loans-box-info {
+        font-size: 1.08em;
+        height: 175px;
+        line-height: 2.2rem;
+        padding-top: 30px;
+        padding-bottom: 10px;
+    }
+
+    .loans-flex-container {
+        display: flex;
+        flex-direction: row;
+    }
+
+    /*========== Footer Area ==========*/
+
+    .footer-icons {
+        margin-left: 5.15%;
+        width: 15%;
+    }
+
+    .footer-info {
+        font-size: .66em;
+    }
+}
+    
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   https://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+    *,
+    *:before,
+    *:after {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster */
+        -webkit-box-shadow: none !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+
+    pre {
+        white-space: pre-wrap !important;
+    }
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    /*
+     * Printing Tables:
+     * http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
